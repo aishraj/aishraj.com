@@ -1,103 +1,134 @@
 @(message: String)
 
-    @main("Aishraj Dahal - Thinker, Programmer") {
+@main("Aishraj Dahal - Thinker, Programmer") {
 
 
 
-        <!-- Header -->
-        <header id="header">
+    <!-- Header -->
+    <header id="header">
 
-                <!-- Logo -->
-            <h1 id="logo"><a href="#">Aishraj Dahal</a></h1>
+            <!-- Logo -->
+        <h1 id="logo"><a href="#">Aishraj Dahal</a></h1>
 
-                <!-- Nav -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#one">What I Do</a></li>
-                    <li><a href="#two">Who I Am</a></li>
-                    <li><a href="#work">My Work</a></li>
-                </ul>
-            </nav>
+            <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#one">What I Do</a></li>
+                <li><a href="#two">Who I Am</a></li>
+                <li><a href="#work">My Work</a></li>
+                <li><a href="#contact">Contact me</a></li>
+            </ul>
+        </nav>
 
-        </header>
+    </header>
 
-        <!-- Intro -->
-        <section id="intro" class="main style1 dark fullscreen">
-            <div class="content container small">
-                <header>
-                    <h2>Hello</h2>
-                </header>
-                <p>Welcome to <strong>Aishraj Dahal's </strong>homepage. Keep scrolling to know more about me and my work.</p>
-                <footer>
-                    <a href="#one" class="button style2 down">More</a>
-                </footer>
-            </div>
-        </section>
+    <!-- Intro -->
+    <section id="intro" class="main style1 dark fullscreen">
+        <div class="content container small">
+            <header>
+                <h2>Hello</h2>
+            </header>
+            <p>Welcome to <strong>Aishraj Dahal's </strong>homepage. Keep scrolling to know more about me and my work.</p>
+            <footer>
+                <a href="#one" class="button style2 down">More</a>
+            </footer>
+        </div>
+    </section>
 
-        <!-- One -->
-        <section id="one" class="main style2 right dark fullscreen">
-            <div class="content box style2">
-                <header>
-                    <h2>What I Do</h2>
-                </header>
-                <p>I have been writing computer programs since I was twelve. Right now I do the same for a living. Besides
+    <!-- One -->
+    <section id="one" class="main style2 right dark fullscreen">
+        <div class="content box style2">
+            <header>
+                <h2>What I Do</h2>
+            </header>
+            <p>I have been writing computer programs since I was twelve. Right now I do the same for a living. Besides
                 developing software  for a livelihood, I have worked on developing Open Source Software as well. Whenever, I'm not spending my free time reading Hacker News, I go trekking, cook awesome food  and travel. </p>
 
+        </div>
+        <a href="#two" class="button style2 down anchored">Next</a>
+    </section>
+
+    <!-- Two -->
+    <section id="two" class="main style2 left dark fullscreen">
+        <div class="content box style2">
+            <header>
+                <h2>Who I Am</h2>
+            </header>
+            <p>I am a full stack software developer currently stationed in Bangalore, India.<br/>
+                I graduated with a Bachelor's degree in Computer Science and Engineering in  2013 from National Institute of Technology Warangal India.<br/>
+                I have previously worked as Google Summer of Code student in 2012, developing Metalink/HTTP support for KDE's KGet Download manager.<br/>
+                In 2011, I worked at the Language Technology Kendra/Kathmandu University Language Labs to develop rule based machine translation for Engilish-Nepali language pair.<br/>
+                In 2009, I was awarded the Duke of Edinburgh's International Award (Gold Standard) for Young People by the Vice President of India.<br/>
+            </p>
+
+
+        </div>
+        <a href="#work" class="button style2 down anchored">Next</a>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="main style3 primary">
+        <div class="content container">
+            <header>
+                <h2>My Work</h2>
+            </header>
+            <p>Visit me on <a href="//github.com/aishraj/" >Github</a> to know more about my work.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="main style3 secondary">
+        <div class="content container">
+            <header>
+                <h2>Say Hello.</h2>
+                <p>Fill out the form below to reach out to me.</p>
+            </header>
+            <div class="box container small">
+
+            @helper.form(action = routes.Application.contactSubmit, 'id -> "contact") {
+                <div class="row half">
+                    <div class="6u"><input type="text" name="name" placeholder="Name" /></div>
+                    <div class="6u"><input type="text" name="email" placeholder="Email" /></div>
+                </div>
+                <div class="row half">
+                    <div class="12u"><textarea name="message" placeholder="Message" rows="6"></textarea></div>
+                </div>
+                <div class="row">
+                    <div class="12u">
+                        <ul class="actions">
+                            <li><input type="submit" class="button" value="Send Message" /></li>
+                        </ul>
+                    </div>
+                </div>
+            }
+
             </div>
-            <a href="#two" class="button style2 down anchored">Next</a>
-        </section>
-
-        <!-- Two -->
-        <section id="two" class="main style2 left dark fullscreen">
-            <div class="content box style2">
-                <header>
-                    <h2>Who I Am</h2>
-                </header>
-                <p>I am a full stack software developer currently stationed in Bangalore, India.<br/>
-                    I graduated with a Bachelor's degree in Computer Science and Engineering in  2013 from National Institute of Technology Warangal India.<br/>
-                    I have previously worked as Google Summer of Code student in 2012, developing Metalink/HTTP support for KDE's KGet Download manager.<br/>
-                    In 2011, I worked at the Language Technology Kendra/Kathmandu University Language Labs to develop rule based machine translation for Engilish-Nepali language pair.<br/>
-                    In 2009, I was awarded the Duke of Edinburgh's International Award (Gold Standard) for Young People by the Vice President of India.<br/>
-                </p>
+        </div>
+    </section>
 
 
-            </div>
-            <a href="#work" class="button style2 down anchored">Next</a>
-        </section>
+    <!-- Footer -->
+    <footer id="footer">
 
-        <!-- Work -->
-        <section id="work" class="main style3 primary">
-            <div class="content container">
-                <header>
-                    <h2>My Work</h2>
-                </header>
-                <p>Visit me on <a href="//github.com/aishraj/" >Github</a> to know more about my work.</p>
-            </div>
-        </section>
-
-
-        <!-- Footer -->
-        <footer id="footer">
-
-                <!--
+            <!--
 				     Social Icons
 
 				     Use anything from here: http://fortawesome.github.io/Font-Awesome/cheatsheet/)
 				-->
-            <ul class="actions">
-                <li><a href="http://twitter.com/aishrajdahal" class="fa solo fa-twitter"><span>Twitter</span></a></li>
-                <li><a href="//github.com/aishraj" class="fa solo fa-github"><span>Twitter</span></a></li>
-                <li><a href="http://in.linkedin.com/in/aishrajdahal/" class="fa solo fa-linkedin"><span>LinkedIn</span></a></li>
-            </ul>
+        <ul class="actions">
+            <li><a href="http://twitter.com/aishrajdahal" class="fa solo fa-twitter"><span>Twitter</span></a></li>
+            <li><a href="//github.com/aishraj" class="fa solo fa-github"><span>Twitter</span></a></li>
+            <li><a href="http://in.linkedin.com/in/aishrajdahal/" class="fa solo fa-linkedin"><span>LinkedIn</span></a></li>
+        </ul>
 
-                <!-- Menu -->
-            <ul class="menu">
-                <li>&copy; Aishraj Dahal</li>
-            </ul>
+            <!-- Menu -->
+        <ul class="menu">
+            <li>&copy; Aishraj Dahal</li>
+        </ul>
 
-        </footer>
+    </footer>
 
 
 
-    }
+}
